@@ -92,7 +92,7 @@ const Homepage = () => {
           <img src={mintImage} alt="" />
         </div>
         <div className='siteTitleDiv'>
-          <h1 className='siteTitle'> Platomint.io</h1>
+          <h1 className='siteTitle'> Platomint</h1>
         </div>
       </Row>
       <br />

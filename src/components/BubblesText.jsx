@@ -39,7 +39,7 @@ jQuery(document).ready(function($){
         $('.individual-bubble').animate({
             'bottom': '100%',
             'opacity' : '-=0.2'
-        }, 1000, function(){
+        }, 500, function(){
             $(this).remove()
         }
         );
