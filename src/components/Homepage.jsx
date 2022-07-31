@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Component, useMemo, useCallback } from 'react';
 import millify from 'millify';
-import { Typography, Row, Col, Statistic, Input, Space, Button, Card, Collapse, Carousel, List, Slider, Radio, Cascader } from 'antd';
+import { Typography, Row, Col, Statistic, Input, Button, Card, Collapse, Carousel, List, Slider, Radio, Cascader, Popover } from 'antd';
 import VirtualList from 'rc-virtual-list';
-import { Link } from 'react-router-dom';
+import { Space } from 'antd';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { Cryptocurrencies, News } from '../components';
@@ -11,6 +11,10 @@ import {
 
 } from '../services/heliumApi';
 
+import PlayToMintCard from './Cards/PlayToMintCard';
+import BubblesText from './BubblesText';
+import GameData from '../app/GameData';
+import PlatoQuotes from '../app/PlatoQuotes';
 
 import mintImage from '../images/mintImage.png';
 import platoImage from '../images/plato.png';
@@ -19,12 +23,47 @@ import holoman from '../images/holoman.gif';
 const { Paragraph } = Typography;
 const { Title } = Typography;
 const { Panel } = Collapse;
+const { Text, Link } = Typography;
+
+
+
+
+
+const gameObj = {
+  "img": require('../images/holoman.gif'),
+  "title": 'holoman',
+  "creator": 'Nota Codeur',
+  "description": 'holoman is a rock paper scissors game',
+  "mintPrice": 10,
+  "wenStart": "now",
+  "wenEnd": "soon",
+  "maxSupply": 1,
+  "gameLink": "https://holoman.netlify.app",
+
+}
+
 
 // account data model
 const Homepage = () => {
 
 
   const { data, isFetching } = useGetCryptosQuery(10);
+
+  const [ellipsis, setEllipsis] = useState(false);
+  const [platoQ, setPlatoQ] = useState(0);
+
+  function RandonNumber() {
+    return Math.floor(Math.random() * PlatoQuotes.length)
+  }
+
+  const platoContent = () => {
+    return (
+      <Col>
+        <p>{PlatoQuotes[platoQ]}</p>
+        <p>- Plato</p>
+      </Col>
+    )
+  }
 
   const cardStyle = { background: '#ffffff', borderRadius: 20, marginBottom: 15, margin: 5, padding: 5, width: '99%', boxShadow: "5px 8px 24px 5px rgba(208, 216, 243, 0.6)" }
   const buttonStyle = { borderRadius: 20, borderColor: '#758bfd' }
@@ -39,7 +78,6 @@ const Homepage = () => {
   };
 
 
-
   if (isFetching) return 'loading...';
 
 
@@ -50,156 +88,57 @@ const Homepage = () => {
 
       <Row className='navDiv' align="middle">
         <div className='img-container'>
-          <div class="centerer"></div>
+          {/* <div class="centerer"></div> */}
           <img src={mintImage} alt="" />
         </div>
         <div className='siteTitleDiv'>
-          <h1 className='siteTitle'> Platomints.com</h1>
+          <h1 className='siteTitle'> Platomint.io</h1>
         </div>
       </Row>
       <br />
-      <Col>
-        <Row className='placeholder'>
-          <Col xs={1} sm={1} md={6} lg={6} xl={6} >
-            <div>
-              <img className='platoImage' src={platoImage} alt="plato" />
-            </div>
-          </Col>
+      {/* <Col> */}
+      <Row className='placeholder'>
+        <Col xs={1} sm={1} md={2} lg={5} xl={5} >
+
+          <div>
+            <Popover placement="rightTop" content={platoContent} trigger="hover" borderRadius="50">
+
+              <img className='platoImage' src={platoImage} alt="plato" onClick={(prev) => prev === setPlatoQ(RandonNumber())}>
+
+              </img>
+              {/* <Button onClick={(prev ) => prev === setPlatoQ( RandonNumber() )}>RB</Button> */}
+            </Popover>
+              <div>
+              </div>
+          </div>
+        </Col>
 
 
-          <Col xs={22} sm={22} md={12} lg={12} xl={12} align='center'>
-            <br />
-            <br />
-            <h2 >Play a game </h2>
-            <h2 >To win a Cardano NFT mint</h2>
-            <br />
-            <br />
-            <br />
-            <br />
-            <h2 >Latest Play to Mints</h2>
-            <br />
+        <Col xs={22} sm={22} md={20} lg={14} xl={14} align='center'>
+          <br />
+          <br />
+          <h2 style={{filter: 'drop-shadow(1px 1px 4px #ffffff)'}}>Play a game </h2>
+          <h2 style={{filter: 'drop-shadow(1px 1px 4px #ffffff)'}}>To win a mint</h2>
+          <Row justify='center' align='middle'>
+            <BubblesText />
+            {/* <div className='bubbles'>
+            </div> */}
+            {/* <h2>Latest Play to Mints</h2> */}
 
+            <img style={{ width: '50px', margin: 20 }} src={mintImage} alt="" />
+          </Row>
+          <br />
 
-
-
-            {/* Play To Mint containter */}
-            {/*| image    ||  | title & description |     | mint info |  | */}
-            {/*            |                      button                 | */}
-            <div className='PTMDiv'>
-              <Row gutter={[40, 40]}>
-
-                {/* image */}
-                <Col span={8}>
-                  <img className='PTMImg' src={holoman} alt='holoman'></img>
-                </Col>
-
-                <div style={{ width: "20px" }} />
-                {/* title desc   +    wen mint    +   max supply */}
-                <Col span={14}>
-                  <Row>
-                    <Col span={10}>
-                      {/* title and description */}
-                      <p className='PTMTitle'> <b>Holoman</b></p>
-                      <p className='PTMDescription'>defeat holoman 10 times in Rock Paper Scissors to win a <b>free mint</b></p>
-
-                    </Col>
-                    <Col span={7}>
-                      {/* image */}
-                      {/* mint info */}
-                      <text className='PTMMintInfo'></text>
-                      <p className='PTMTitle'> mint : </p>
-                      <p className='PTMTitle'> <b>6.5AD</b></p>
-                      <br />
-                      <p className='PTMDescription'>wen start :</p>
-                      <p className='PTMDescription'><b>13-08-22</b></p>
-                      <p className='PTMDescription'>wen end :</p>
-                      <p className='PTMDescription'><b>13-09-22</b></p>
-
-                    </Col>
-                    <Col span={7}>
-                      {/* image */}
-                      {/* mint info */}
-                      <text className='PTMMintInfo'></text>
-                      <p className='PTMTitle'> max supply : </p>
-                      <p className='PTMTitle'> <b>1000</b></p>
-                      <br />
-                      <p className='PTMDescription'>already minted</p>
-                      <p className='PTMDescription'><b>420</b></p>
-
-
-                    </Col>
-                  </Row>
-
-                  {/* play button */}
-                  <a className='PTMPlayButton' href="https://holoman.netlify.app" target="_blank">play </a>
-                  {/* <button className='PTMPlayButton' onClick={function()=>{}}> play</button> */}
-
-                </Col>
-              </Row>
-            </div>
-            <div className='PTMDiv'>
-              <Row gutter={[40, 40]}>
-
-                {/* image */}
-                <Col span={8}>
-                  <img className='PTMImg' src={holoman} alt='holoman'></img>
-                </Col>
-
-                <div style={{ width: "20px" }} />
-                {/* title desc   +    wen mint    +   max supply */}
-                <Col span={14}>
-                  <Row>
-                    <Col span={10}>
-                      {/* title and description */}
-                      <p className='PTMTitle'> <b>Holoman</b></p>
-                      <p className='PTMDescription'>defeat holoman 10 times in Rock Paper Scissors to win a <b>free mint</b></p>
-
-                    </Col>
-                    <Col span={7}>
-                      {/* image */}
-                      {/* mint info */}
-                      <text className='PTMMintInfo'></text>
-                      <p className='PTMTitle'> mint : </p>
-                      <p className='PTMTitle'> <b>6.5AD</b></p>
-                      <br />
-                      <p className='PTMDescription'>wen start :</p>
-                      <p className='PTMDescription'><b>13-08-22</b></p>
-                      <p className='PTMDescription'>wen end :</p>
-                      <p className='PTMDescription'><b>13-09-22</b></p>
-
-                    </Col>
-                    <Col span={7}>
-                      {/* image */}
-                      {/* mint info */}
-                      <text className='PTMMintInfo'></text>
-                      <p className='PTMTitle'> max supply : </p>
-                      <p className='PTMTitle'> <b>1000</b></p>
-                      <br />
-                      <p className='PTMDescription'>already minted</p>
-                      <p className='PTMDescription'><b>420</b></p>
-
-
-                    </Col>
-                  </Row>
-
-                  {/* play button */}
-                  <a className='PTMPlayButton' href="https://holoman.netlify.app" target="_blank">play </a>
-                  {/* <button className='PTMPlayButton' onClick={function()=>{}}> play</button> */}
-
-                </Col>
-              </Row>
-            </div>
-
-            
+          {GameData.map((game) => <PlayToMintCard gameObj={game}></PlayToMintCard>)}
 
 
 
-          </Col>
-          <Col xs={1} sm={1} md={6} lg={6} xl={6}></Col>
-        </Row>
-        
-      </Col>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+        </Col>
+        <Col xs={1} sm={1} md={2} lg={5} xl={5}></Col>
+      </Row>
+
+      {/* </Col> */}
     </>
   )
 }

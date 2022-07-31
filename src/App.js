@@ -11,41 +11,43 @@ const App = () => {
             {/* <div className='navbar'>
                 <Navbar />
             </div> */}
-            
+
             <div className='main'>
-                <Layout>
-                    <div style={{background: '#f1f2f6'}} className='routes'>
-                        
-                        <Switch>
-                            <Route exact path='/'>
-                                <Homepage />
-                            </Route>
-                            <Route exact path='/helium'>
-                                <Helium />
-                            </Route>
-                            <Route exact path='/cryptocurrencies'>
-                                <Cryptocurrencies />
-                            </Route>
-                            <Route exact path='/crypto/:coinUuid'>
-                                <CryptoDetails />
-                            </Route>
-                            <Route exact path='/news'>
-                                <News />
-                            </Route>
-                        </Switch>
-                      
-                    </div>
-                </Layout>
+                <div className='bubbles' >
+                    <Layout>
+                        <div style={{  }} className='routes'>
+
+                            <Switch>
+                                <Route exact path='/'>
+                                    <Homepage />
+                                </Route>
+                                <Route exact path='/helium'>
+                                    <Helium />
+                                </Route>
+                                <Route exact path='/cryptocurrencies'>
+                                    <Cryptocurrencies />
+                                </Route>
+                                <Route exact path='/crypto/:coinUuid'>
+                                    <CryptoDetails />
+                                </Route>
+                                <Route exact path='/news'>
+                                    <News />
+                                </Route>
+                            </Switch>
+
                 <div className='footer'>
                     <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
-                        WalleyDash <br />
+                        Platomint.io <br />
                         All rights reserves
                     </Typography.Title>
                     <Space>
                         <Link to='/'>Home</Link>
-                        <Link to='/helium'>Helium</Link>
                         <Link to='/news'>News</Link>
                     </Space>
+                </div>
+                        </div>
+                    </Layout>
+
                 </div>
             </div>
         </div>
