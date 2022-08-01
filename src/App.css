@@ -92,6 +92,7 @@ a:hover {
 .siteTitle {
     background: linear-gradient(-45deg, #AEC8FC, #AEC8FC, #FFB4C6, #FFB4C6);
     background-size: 300%;
+    margin-left: 100px;
     font-family: Inter, sans-serif;
     font-weight: 900;
     font-size:xx-large;
@@ -233,7 +234,7 @@ a:hover {
     position: absolute;
     border-radius: 100%;
     bottom: 10px;
-    background-color: rgb(173, 230, 255);
+    background-color: rgb(70, 200, 255);
     z-index: 1;
 }
 

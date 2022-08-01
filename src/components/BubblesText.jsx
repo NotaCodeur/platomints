@@ -38,14 +38,14 @@ jQuery(document).ready(function($){
         // Callback function used to remove finsihed animations from the page
         $('.individual-bubble').animate({
             'bottom': '100%',
-            'opacity' : '-=0.2'
-        }, 500, function(){
+            'opacity' : '-=0.1'
+        }, 900, function(){
             $(this).remove()
         }
         );
  
  
-    }, 3500);
+    }, 950);
  
 });
 
