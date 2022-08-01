@@ -1,5 +1,7 @@
 const PlatoQuotes = [
     "This UI is fun!",
+    "He who mints will unluck great potential for his future.",
+    
     "If you do not take an interest in the affairs of your government, then you are doomed to live under the rule of fools.",
     "No one is more hated than he who speaks the truth.",
     "Reality is created by the mind, we can change our reality by changing our mind.",

@@ -34,7 +34,7 @@ a:hover {
     /* flex: 0.2; */
     position: relative;
     background-color: #febbf75d;
-    filter: drop-shadow(4px 8px 2px #4444dd52);
+    /* filter: drop-shadow(4px 8px 2px #4444dd52); */
     border-radius: 40px;
     padding: 10px;
     width: 100%;
@@ -55,7 +55,7 @@ a:hover {
 .placeholder {
     /* flex: 0.2; */
     /* background-color: var(--pink) !important; */
-    filter: drop-shadow(4px 8px 4px #4444dd52);
+    /* filter: drop-shadow(4px 8px 4px #4444dd52); */
     border-radius: 40px;
     /* padding: 0px; */
     width: 100%;
@@ -625,7 +625,7 @@ a:hover {
     background-color: #febbf75d;
     border-radius: 40px;
     margin: 10px;
-    filter: drop-shadow(4px 8px 2px #4444dd52);
+    /* filter: drop-shadow(4px 8px 2px #4444dd52); */
 
     display: flex;
     flex-direction: column;
