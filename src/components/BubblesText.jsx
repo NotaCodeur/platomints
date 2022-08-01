@@ -39,13 +39,13 @@ jQuery(document).ready(function($){
         $('.individual-bubble').animate({
             'bottom': '100%',
             'opacity' : '-=0.1'
-        }, 900, function(){
+        }, 9900, function(){
             $(this).remove()
         }
         );
  
  
-    }, 950);
+    }, 1950);
  
 });
 

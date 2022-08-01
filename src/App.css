@@ -185,7 +185,7 @@ a:hover {
     /* width: 200px; */
     /* height: 15vw; */
     /* -webkit-background-clip: text; */
-    background-size: 200% 200%;
+    background-size: 300%;
     /* -webkit-text-fill-color: transparent; */
     animation: animated_background 2s ease-in-out infinite;
     -moz-animation: animated_background 2s ease-in-out infinite;
