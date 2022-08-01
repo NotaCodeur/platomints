@@ -87,6 +87,7 @@ a:hover {
 
 .siteTitleDiv {
     padding-left: 100px
+    rgba(206, 250, 255, 0.575)
 }
 
 .siteTitle {
@@ -106,7 +107,7 @@ a:hover {
     /* filter: drop-shadow(2px 4px 4px #ffffff60); */
 }
 .siteText {
-    background: linear-gradient(-45deg, #efeff0, #d2d3d6, #d4d1d2, #bf8f9c);
+    background: linear-gradient(-45deg, #d1d1ef, #9198ac, #e9c8d4, #9c8489);
     background-size: 300%;
     margin-left: 100px;
     font-family: Inter, sans-serif;
@@ -116,9 +117,9 @@ a:hover {
     /* text-transform: uppercase; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: animated_text 10s ease-in-out infinite;
-    -moz-animation: animated_text 10s ease-in-out infinite;
-    -webkit-animation: animated_text 10s ease-in-out infinite;
+    animation: animated_text 4s ease-in-out infinite;
+    -moz-animation: animated_text 4s ease-in-out infinite;
+    -webkit-animation: animated_text 4s ease-in-out infinite;
     /* filter: drop-shadow(2px 4px 4px #ffffff60); */
 }
 
@@ -138,6 +139,7 @@ a:hover {
 
 .platoImage{
     border-bottom-right-radius: 25%;
+    opacity:0.6;
 }
 
 .PTMDiv {
@@ -270,6 +272,7 @@ a:hover {
 .routes {
     padding: 15px;
     background-color: rgba(228, 249, 255, 0.547);
+    /* background-color: rgba(228, 249, 255, 0.547);  old light blue background */
 
 
 }

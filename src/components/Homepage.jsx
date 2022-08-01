@@ -108,7 +108,8 @@ const Homepage = () => {
             {/* <Button onClick={(prev ) => prev === setPlatoQ( RandonNumber() )}>RB</Button> */}
           </Popover>
         </Col>
-        <Col xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+        {/* style={{background: 'rgba(255, 255, 255, 0.575)',marginTop:20 , padding: 0, borderRadius: 40}} */}
+        <Col xs={12} sm={12} md={12} lg={12} xl={12} align='center' style={{marginTop:20 , padding: 0, }}>
           <br />
           <br />
           <br />
@@ -118,7 +119,7 @@ const Homepage = () => {
           <h2 className='siteTitle' style={{marginLeft: 0, fontSize: 28 ,  }}>Play </h2>
           <h2 className='siteText' style={{marginLeft: 10, fontSize: 28 ,  }}>a game 🎮</h2>
           </Row>
-          <Row align='center'>
+          <Row align='center' >
 
           <h2 className='siteText' style={{marginLeft: 0, fontSize: 28 ,  }}>To</h2>
           <h2 className='siteTitle' style={{marginLeft: 10, fontSize: 28 ,  }}>win </h2>

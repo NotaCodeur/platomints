@@ -56,7 +56,7 @@ const PlayToMintCard = ({ gameObj }) => {
                                 {/* <p level={5} className='buttonText'>Play</p> */}
                             </a>
                             || 
-                            <a disabled className='PTMPlayButton'  > Play
+                            <a disabled className='PTMPlayButton'  > Soon
                                 {/* <p level={5} className='buttonText'>Play</p> */}
                             </a>
                             
