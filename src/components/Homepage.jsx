@@ -91,39 +91,58 @@ const Homepage = () => {
           {/* <div class="centerer"></div> */}
           <img src={mintImage} alt="" />
         </div>
-          <h1 className='siteTitle'> Platomint</h1>
+        <h1 className='siteTitle'> Platomint</h1>
         {/* <div className='siteTitleDiv'>
         </div> */}
       </Row>
-      <br />
       {/* <Col> */}
       <Row className='placeholder'>
+
+        <Col xs={6} sm={6} md={6} lg={6} xl={6} >
+
+          <Popover placement="rightTop" content={platoContent} trigger="hover" borderRadius="50">
+
+            <img className='platoImage' src={platoImage} alt="plato" onClick={(prev) => prev === setPlatoQ(RandonNumber())}>
+
+            </img>
+            {/* <Button onClick={(prev ) => prev === setPlatoQ( RandonNumber() )}>RB</Button> */}
+          </Popover>
+        </Col>
+        <Col xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Row align='center'>
+
+          <h2 className='siteTitle' style={{marginLeft: 0, fontSize: 28 ,  }}>Play </h2>
+          <h2 className='siteText' style={{marginLeft: 10, fontSize: 28 ,  }}>a game 🎮</h2>
+          </Row>
+          <Row align='center'>
+
+          <h2 className='siteText' style={{marginLeft: 0, fontSize: 28 ,  }}>To</h2>
+          <h2 className='siteTitle' style={{marginLeft: 10, fontSize: 28 ,  }}>win </h2>
+          <h2 className='siteText' style={{marginLeft: 10, fontSize: 28 ,  }}>a </h2>
+          <h2 className='siteTitle' style={{marginLeft: 10, fontSize: 28 ,  }}>mint </h2>
+          {/* info icon with popup to explain what a mint is  */}
+          {/* <h2 className='siteText' style={{marginLeft: 10, fontSize: 28 ,  }}>ℹ </h2> */}
+          </Row>
+          {/* <h2 style={{ filter: 'drop-shadow(1px 1px 4px #ffffff)' }}>To win a mint</h2> */}
+          <br />
+          <br />
+          <br />
+        </Col>
+        <Col xs={6} sm={6} md={6} lg={6} xl={6} >
+
+
+        </Col>
         <Col xs={1} sm={1} md={2} lg={5} xl={5} >
 
-          <div>
-            <Popover placement="rightTop" content={platoContent} trigger="hover" borderRadius="50">
-
-              <img className='platoImage' src={platoImage} alt="plato" onClick={(prev) => prev === setPlatoQ(RandonNumber())}>
-
-              </img>
-              {/* <Button onClick={(prev ) => prev === setPlatoQ( RandonNumber() )}>RB</Button> */}
-            </Popover>
-              <div>
-              </div>
-          </div>
+          
         </Col>
 
-
         <Col xs={22} sm={22} md={20} lg={14} xl={14} align='center'>
-          <br />
-          <br />
-          <br />
-          <br />
-          <h2 style={{filter: 'drop-shadow(1px 1px 4px #ffffff)'}}>Play a game </h2>
-          <h2 style={{filter: 'drop-shadow(1px 1px 4px #ffffff)'}}>To win a mint</h2>
-          <br />
-          <br />
-          <br />
+          
           <Row justify='center' align='middle'>
             <BubblesText />
             {/* <div className='bubbles'>

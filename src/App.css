@@ -105,6 +105,22 @@ a:hover {
     -webkit-animation: animated_text 10s ease-in-out infinite;
     /* filter: drop-shadow(2px 4px 4px #ffffff60); */
 }
+.siteText {
+    background: linear-gradient(-45deg, #efeff0, #d2d3d6, #d4d1d2, #bf8f9c);
+    background-size: 300%;
+    margin-left: 100px;
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+    font-size:x-large;
+    letter-spacing: 0px;
+    /* text-transform: uppercase; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 10s ease-in-out infinite;
+    -moz-animation: animated_text 10s ease-in-out infinite;
+    -webkit-animation: animated_text 10s ease-in-out infinite;
+    /* filter: drop-shadow(2px 4px 4px #ffffff60); */
+}
 
 @keyframes animated_text {
     0% {

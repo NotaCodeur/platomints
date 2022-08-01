@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, Component, useMemo, useCallback } from 'react';
+import { Row } from 'antd';
 import jQuery from 'jquery';
 
 const BubblesText = () => {
@@ -38,22 +39,26 @@ jQuery(document).ready(function($){
         // Callback function used to remove finsihed animations from the page
         $('.individual-bubble').animate({
             'bottom': '100%',
-            'opacity' : '-=0.1'
+            'opacity' : '-=0.3'
         }, 9900, function(){
             $(this).remove()
         }
         );
  
  
-    }, 1950);
+    }, 9950);
  
 });
 
 
     return (
-        <div class="bubbles" >
-            <h3 className='siteTitle'>Latest play to mints </h3>
-        </div >
+        <Row class="bubbles" align='center'>
+            <h3 className='siteTitle' style={{marginLeft: 0}}>👇 </h3>
+            <h3 className='siteText' style={{marginLeft: 10, fontSize: 32}}>New </h3>
+            <h3 className='siteTitle' style={{marginLeft: 10}}>play </h3>
+            <h3 className='siteText' style={{marginLeft: 10, fontSize: 32}}> to </h3>
+            <h3 className='siteTitle' style={{marginLeft: 10}}> mints </h3>
+        </Row >
     )
 }
 
