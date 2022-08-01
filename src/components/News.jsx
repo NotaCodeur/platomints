@@ -11,7 +11,7 @@ const { Option } = Select;
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
 const News = ({ simplified }) => {
-  const [ newsCategory, setNewsCategory] = useState('Cryptocurrency');
+  const [ newsCategory, setNewsCategory] = useState('mint');
   const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
   const { data } = useGetCryptosQuery(100);
 
@@ -30,6 +30,7 @@ const News = ({ simplified }) => {
             onChange={(value) => setNewsCategory(value)}
             filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
+            <Option value='mint'>mint</Option>
             <Option value='Cryptocurrency'>Cryptocurrency</Option>
             {data?.data?.coins.map((coin) => <Option value={coin.name}>{coin.name}</Option>)}
           </Select>
