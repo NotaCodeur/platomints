@@ -85,6 +85,7 @@ const Homepage = () => {
   return (
     <>
       <br />
+      <div style={{padding: 10}}>
 
       <Row className='navDiv' align="middle">
         <div className='img-container'>
@@ -95,6 +96,7 @@ const Homepage = () => {
         {/* <div className='siteTitleDiv'>
         </div> */}
       </Row>
+        </div>
       {/* <Col> */}
       <Row className='placeholder'>
 
