@@ -117,8 +117,13 @@ const Homepage = () => {
         <Col xs={22} sm={22} md={20} lg={14} xl={14} align='center'>
           <br />
           <br />
+          <br />
+          <br />
           <h2 style={{filter: 'drop-shadow(1px 1px 4px #ffffff)'}}>Play a game </h2>
           <h2 style={{filter: 'drop-shadow(1px 1px 4px #ffffff)'}}>To win a mint</h2>
+          <br />
+          <br />
+          <br />
           <Row justify='center' align='middle'>
             <BubblesText />
             {/* <div className='bubbles'>

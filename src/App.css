@@ -233,7 +233,7 @@ a:hover {
     position: absolute;
     border-radius: 100%;
     bottom: 10px;
-    background-color: #fff;
+    background-color: rgb(173, 230, 255);
     z-index: 1;
 }
 
