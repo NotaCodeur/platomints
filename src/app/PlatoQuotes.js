@@ -1,5 +1,5 @@
 const PlatoQuotes = [
-    "This UI is fun!",
+    "This UI is yummy!",
     "He who mints will unluck great potential for his future.",
     
     "If you do not take an interest in the affairs of your government, then you are doomed to live under the rule of fools.",

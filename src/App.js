@@ -37,7 +37,7 @@ const App = () => {
 
                 <div className='footer'>
                     <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
-                        Platomint <br />
+                        Platomint.io <br />
                         All rights reserves
                     </Typography.Title>
                     <Space>

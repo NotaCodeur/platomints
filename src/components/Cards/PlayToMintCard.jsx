@@ -41,12 +41,21 @@ const PlayToMintCard = ({ gameObj }) => {
                             </Paragraph>
                         </Col>
 
-                        <Col xs={24} sm={24} md={10} lg={10} xl={10}>
-                            <Space direction="vertical">
+                        <Col xs={24} sm={24} md={10} lg={10} xl={10} type='flex' align='middle'>
+                            <Space direction="vertical" >
 
                                 <Paragraph ellipsis={false}>
-                                    mint: <br /><b>{gameObj.mintPrice} ADA</b> <br />wen: <br /><b>{gameObj.wenStart}</b><br />max supply: <br /> <b>{gameObj.maxSupply} </b>
+                                    mint: <br /><b>{gameObj.mintPrice} ADA</b> <br />wen: <br /><b>{gameObj.wenStart}</b><br />wen end: <br /><b>{gameObj.wenEnd}</b><br />max supply: <br /> <b>{gameObj.maxSupply} </b>
                                 </Paragraph>
+                            <Row justify='space-between' align='end'>
+                                <Col>
+                                {gameObj.poolLink  && <a href={gameObj.poolLink} target="_blank" className='siteText' style={{marginLeft: 0, fontSize: 28 ,  }}>🔍</a> || null}
+                                </Col>
+                                <Col>
+                                {gameObj.poolLink  && <a href={gameObj.storeLink} target="_blank" className='siteText' style={{marginLeft: 0, fontSize: 28 ,  }}>💲</a> || null}
+                                </Col>
+                            </Row>
+                                <br />
                             </Space>
                         </Col>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24} display="flex" flex="auto" style={{height: "100%"}}>

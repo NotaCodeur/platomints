@@ -91,7 +91,7 @@ const Homepage = () => {
           {/* <div class="centerer"></div> */}
           <img src={mintImage} alt="" />
         </div>
-        <h1 className='siteTitle'> Platomint</h1>
+        <h1 className='siteTitle'> Platomint.io</h1>
         {/* <div className='siteTitleDiv'>
         </div> */}
       </Row>
