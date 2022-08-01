@@ -103,7 +103,7 @@ a:hover {
     animation: animated_text 10s ease-in-out infinite;
     -moz-animation: animated_text 10s ease-in-out infinite;
     -webkit-animation: animated_text 10s ease-in-out infinite;
-    filter: drop-shadow(2px 4px 4px #ffffff60);
+    /* filter: drop-shadow(2px 4px 4px #ffffff60); */
 }
 
 @keyframes animated_text {
