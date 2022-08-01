@@ -51,10 +51,16 @@ const PlayToMintCard = ({ gameObj }) => {
                         </Col>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24} display="flex" flex="auto" style={{height: "100%"}}>
                         <Row justify="center" align='bottom' flex="auto" display="flex" style={{width:"100%", height: "100%"}} >
-
+                            {gameObj.gameLink.length > 0 &&  
                             <a  className='PTMPlayButton' href={gameObj.gameLink} target="_blank"> Play
                                 {/* <p level={5} className='buttonText'>Play</p> */}
                             </a>
+                            || 
+                            <a disabled className='PTMPlayButton'  > Play
+                                {/* <p level={5} className='buttonText'>Play</p> */}
+                            </a>
+                            
+                            }
                         </Row>
                         </Col>
                     </Row>
