@@ -1,6 +1,20 @@
 
 const GameData = [
     {
+        "img": ('https://s4.gifyu.com/images/dino-prototype3.gif'),
+        "title": 'Sh1t Runner',
+        "creator": 'Nota Codeur',
+        "description": 'Use your NFT as a character in this runner game. Dont step on the sh1t',
+        "mintPrice": 10,
+        "wenStart": "soon",
+        "wenEnd": "01/17/2023",
+        "maxSupply": "100",
+        "gameLink": "/shitrunner",
+        "poolLink": "https://pool.pm/asset18ej959jk43elvt6eunmzh905slggcv4cnewqjg",
+        "storeLink": "https://www.jpg.store/collection/Holoman",
+        "internal": true,
+    },
+    {
         "img": require('../images/holoman.gif'),
         "title": 'holoman',
         "creator": 'Nota Codeur',
