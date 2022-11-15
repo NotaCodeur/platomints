@@ -189,9 +189,9 @@ const CharacterSwiper = ({ state, dispatch, stateTwo, dispatchTwo, setSelectedCh
 
 
     const obj = {
-        amount: "1",
+        amount: "1000",
         asset: { last_metadata: { image: "https://s4.gifyu.com/images/dino-prototype3.gif" } },
-        name: "sh1trunner",
+        name: "Sh1t Runner",
         policy: "129d5472636cf6ac966854efa577c6bf4e86982a69107402fb0ebaae",
         policyAndName: "129d5472636cf6ac966854efa577c6bf4e86982a69107402fb0ebaae686f6c6f676966",
     }

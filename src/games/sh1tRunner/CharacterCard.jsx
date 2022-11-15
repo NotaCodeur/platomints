@@ -183,8 +183,14 @@ const CharacterCard = ({ NFT, artSize, dispatchTwo,
 
                     <br />
                     <div className='buyArtButton'> name: {NFT.name}</div>
-                    <div className='buyArtButton'> amount: {NFT.amount}</div>
+                    <div className='buyArtButton'> total: {NFT.amount}</div>
                     <div className='buyArtButton' style={{ overflow: 'hidden' }}> policy: {NFT.policy}</div>
+                    <br />
+
+                    <Row justify='center'>
+
+                    <div className='connectWalletButton'  onClick={() => window.open('https://pay.nmkr.io/?p=bdefd23ad62545fb90e5b57ca5ee6f26&c=1')} target="_blank"> Buy NFT</div>
+                    </Row>
 
                 </Card>
             }
