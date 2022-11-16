@@ -188,8 +188,14 @@ const CharacterSwiper = ({ state, dispatch, stateTwo, dispatchTwo, setSelectedCh
     }, [selectedCard])
 
 
+    // spacebud asses image link   
+    // https://api.ipfsbrowser.com/ipfs/get.php?hash=QmdSN57S1Fuds5tCGFynrWhX7stLVDYfDoeQwFpEVBaMyS
+
+    //zombits asset link
+    // http://api.ipfsbrowser.com/ipfs/get.php?hash=QmQhyit6KeccE8vYRUeueybtxteC7ipbHzfRCGLZbo29s5
     const obj = {
         amount: "1000",
+        // asset: { last_metadata: { image: "http://api.ipfsbrowser.com/ipfs/get.php?hash=QmQhyit6KeccE8vYRUeueybtxteC7ipbHzfRCGLZbo29s5" } },
         asset: { last_metadata: { image: "https://s4.gifyu.com/images/dino-prototype3.gif" } },
         name: "Sh1t Runner",
         policy: "129d5472636cf6ac966854efa577c6bf4e86982a69107402fb0ebaae",

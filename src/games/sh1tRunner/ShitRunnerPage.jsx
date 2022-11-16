@@ -130,7 +130,8 @@ const ShitRunnerPage = ({ state, dispatch, stateTwo, dispatchTwo }) => {
         }
     }, [])
 
-    const [ groundImage, setGroundImage] = useState('https://s4.gifyu.com/images/ground3.png')
+    const [ groundImage, setGroundImage] = useState('https://i.postimg.cc/cLLxRF0W/ground01.png')
+    // const [ groundImage, setGroundImage] = useState('https://s4.gifyu.com/images/ground3.png')
     useEffect(() => {
 
     }, [])
