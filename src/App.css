@@ -450,6 +450,7 @@ a:hover {
     flex: 1;
     width: 100%;
     
+    
 
 }
 
@@ -457,7 +458,7 @@ a:hover {
     /* padding: 15px; */
     background-color: rgba(228, 249, 255, 0.547);
     /* background-color: rgba(228, 249, 255, 0.547);  old light blue background */
-
+z-index: 0;
 
 }
 

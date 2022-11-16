@@ -8,6 +8,9 @@ import './styles.css'
 import { updateGround, setupGround } from "./ground.js"
 import { updateDino, setupDino, getDinoRect, setDinoLose } from "./dino.js"
 import { updateCactus, setupCactus, getCactusRects } from "./cactus.js"
+import { updateCloud, setupCloud, getCloudRects } from "./cloud.js"
+import { updateRock, setupRock, } from "./rock.js"
+import { updateFlower, setupFlower } from "./flower.js"
 import NFTSwiperSection from '../../components/sections/NFTSwiperSection';
 import TokenSwiperSection from '../../components/sections/TokenSwiperSection';
 import CharacterSwiper from './CharacterSwiper';
@@ -47,6 +50,9 @@ function update(time) {
     updateGround(delta, speedScale)
     updateDino(delta, speedScale)
     updateCactus(delta, speedScale)
+    updateCloud(delta, speedScale)
+    updateRock(delta, speedScale)
+    updateFlower(delta, speedScale)
     updateSpeedScale(delta)
     updateScore(delta)
     if (checkLose()) return handleLose()
@@ -85,6 +91,9 @@ function handleStart() {
     setupGround()
     setupDino(document.querySelector(".dino"))
     setupCactus()
+    setupCloud()
+    setupRock()
+    setupFlower()
     startScreenElem.classList.add("hide")
     window.requestAnimationFrame(update)
 }
@@ -130,7 +139,7 @@ const ShitRunnerPage = ({ state, dispatch, stateTwo, dispatchTwo }) => {
         }
     }, [])
 
-    const [ groundImage, setGroundImage] = useState('https://i.postimg.cc/cLLxRF0W/ground01.png')
+    const [ groundImage, setGroundImage] = useState('https://i.postimg.cc/fWKvYMct/ground02.png')
     // const [ groundImage, setGroundImage] = useState('https://s4.gifyu.com/images/ground3.png')
     useEffect(() => {
 
