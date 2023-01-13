@@ -1,6 +1,18 @@
 
 const GameData = [
     {
+        "img": require('../images/mintImage.png'),
+        "title": 'SpinToMint #1',
+        "creator": 'Nota Codeur',
+        "description": 'Spin to Mint is a Generative Pixel Art CNFT Collection. Spin the machine to win a mint',
+        "mintPrice": 10,
+        "wenStart": "now",
+        "wenEnd": "01/11/24",
+        "maxSupply": "33 unique",
+        "gameLink": "/spintomint",
+        "internal": true,
+    },
+    {
         "img": ('https://s4.gifyu.com/images/dino-prototype3.gif'),
         "title": 'Sh1t Runner',
         "creator": 'Nota Codeur',
@@ -36,17 +48,6 @@ const GameData = [
         "wenStart": "soon",
         "wenEnd": "later",
         "maxSupply": "XX unique",
-        "gameLink": "",
-    },
-    {
-        "img": require('../images/mintImage.png'),
-        "title": 'SpinToMint',
-        "creator": 'Nota Codeur',
-        "description": 'Spin to Mint is a Generative Pixel Art CNFT Collection. Spin the machine to win a mint',
-        "mintPrice": 10,
-        "wenStart": "soon",
-        "wenEnd": "later",
-        "maxSupply": "XXXX unique",
         "gameLink": "",
     },
 ]

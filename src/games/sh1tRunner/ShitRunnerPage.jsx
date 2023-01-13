@@ -154,7 +154,7 @@ const ShitRunnerPage = ({ state, dispatch, stateTwo, dispatchTwo }) => {
                 {/* <script src="./script.js" type="module"></script> */}
                 {/* ShitRunnerPage */}
 
-                <div class="world" data-world>
+                <div class="world" data-world onClick={() => handleStart()}>
                     <div class="score" data-score>0</div>
                     <div class="start-screen" data-start-screen>Press Any Key To Start</div>
                     <img src={groundImage} class="ground" alt='ground' data-ground />

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h4 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h5 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 !important;
+}
+
+div {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+span {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.spinButton {
+    -webkit-box-shadow: 5px 5px 0px -0px #008000;
+    -moz-box-shadow: 5px 5px 0px -0px #008000;
+    box-shadow: 5px 5px 0px -0px #008000;
+}
+
+.spinButton:hover {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    -webkit-box-shadow: 3px 3px 0px -0px #008000;
+    -moz-box-shadow: 3px 3px 0px -0px #008000;
+    box-shadow: 3px 3px 0px -0px #008000;
+
+}
+
+.spinButton:active {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    -webkit-box-shadow: 1px 1px 0px -0px #008000, 0px 0px 30px 0px #7CFC00;
+    -moz-box-shadow: 1px 1px 0px -0px #008000, 0px 0px 30px 0px #7CFC00;
+    box-shadow: 1px 1px 0px -0px #008000, 0px 0px 30px 0px #7CFC00;
+    /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate; */
+}
+
+@-webkit-keyframes glow {
+    from {
+        -webkit-box-shadow: 1px 1px 0px -0px #008000, 0px 0px 10px 0px #7CFC00;
+        -moz-box-shadow: 1px 1px 0px -0px #008000, 0px 0px 10px 0px #7CFC00;
+        box-shadow: 1px 1px 0px -0px #008000, 0px 0px 10px 0px #7CFC00;
+    }
+
+    to {
+        -webkit-box-shadow: 1px 1px 0px -0px #008000, 0px 0px 30px 0px #7CFC00;
+        -moz-box-shadow: 1px 1px 0px -0px #008000, 0px 0px 30px 0px #7CFC00;
+        box-shadow: 1px 1px 0px -0px #008000, 0px 0px 30px 0px #7CFC00;
+    }
+}
+
+.spinButton p {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+}
+
+
+.mintButtonDisabled {
+    border: none;
+    -webkit-box-shadow: inset 2px 2px 0px -0px #008B8B;
+    -moz-box-shadow: inset 2px 2px 0px -0px #008B8B;
+    box-shadow: inset 2px 2px 0px -0px #008B8B;
+}
+
+.mintButtonEnabled {
+    border: none;
+
+    -webkit-box-shadow: 5px 5px 0px -0px #008B8B, 0px 0px 10px 0px #008B8B;
+    -moz-box-shadow: 5px 5px 0px -0px #008B8B, 0px 0px 10px 0px #008B8B;
+    box-shadow: 5px 5px 0px -0px #008B8B, 0px 0px 10px 0px #008B8B;
+   
+}
+
+.mintButtonEnabled:hover {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    -webkit-box-shadow: 3px 3px 0px -0px #008B8B;
+    -moz-box-shadow: 3px 3px 0px -0px #008B8B;
+    box-shadow: 3px 3px 0px -0px #008B8B;
+
+}
+
+.mintButtonEnabled:active {
+    position: relative;
+    top: 4px;
+    left: 4px;
+
+    -webkit-box-shadow: 1px 1px 0px -0px #008B8B, 0px 0px 30px 0px #008B8B;
+    -moz-box-shadow: 1px 1px 0px -0px #008B8B, 0px 0px 30px 0px #008B8B;
+    box-shadow: 1px 1px 0px -0px #008B8B, 0px 0px 30px 0px #008B8B;
+}
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}

@@ -60,6 +60,7 @@ import { blake2b } from "blakejs";
 import { get } from 'jquery';
 import axios from 'axios';
 import ShitRunnerPage from './games/sh1tRunner/ShitRunnerPage';
+import SpinToMintPage from './games/spinToMint/SpinToMintPage';
 
 let Buffer = require('buffer/').Buffer
 let blake = require('blakejs')
@@ -1036,6 +1037,9 @@ const App = () => {
 
                                 <Route exact path='/shitrunner'>
                                     <ShitRunnerPage state={state} dispatch={dispatch} stateTwo={stateTwo} dispatchTwo={dispatchTwo} />
+                                </Route>
+                                <Route exact path='/spintomint'>
+                                    <SpinToMintPage state={state} dispatch={dispatch} stateTwo={stateTwo} dispatchTwo={dispatchTwo} />
                                 </Route>
 
 
